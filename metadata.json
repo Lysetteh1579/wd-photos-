@@ -1,6 +1,6 @@
 {
   "name": "WD Photos",
-  "description": "A photography portfolio and photo gallery showcase for web design projects with responsive grid, album filtering, photo viewer, and uploads.",
+  "description": "A 9-photo gallery grid with 3 rows and 3 columns of equal dimensions, each with an image and a title.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

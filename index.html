@@ -4,18 +4,281 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e11d48' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2' ry='2'/><circle cx='9' cy='9' r='2'/><path d='m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21'/></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WD Photos</title>
-    <meta name="description" content="A photography portfolio and photo gallery showcase for web design projects with responsive grid, album filtering, photo viewer, and uploads." />
-    <meta property="og:title" content="WD Photos" />
-    <meta property="og:description" content="A photography portfolio and photo gallery showcase for web design projects with responsive grid, album filtering, photo viewer, and uploads." />
+    <title>Photo Gallery - 9 Photo Grid</title>
+    <meta name="description" content="A 9-photo gallery grid with 3 rows and 3 columns of equal dimensions, each with an image and a title." />
+    <meta property="og:title" content="Photo Gallery - 9 Photo Grid" />
+    <meta property="og:description" content="A 9-photo gallery grid with 3 rows and 3 columns of equal dimensions, each with an image and a title." />
     <meta property="og:type" content="website" />
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #fafaf9;
+        color: #1c1917;
+        min-height: 100vh;
+        padding: 2.5rem 1rem;
+      }
+      .gallery-container {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+      .gallery-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .gallery-cursive-name {
+        font-family: 'Great Vibes', cursive;
+        font-size: 3.75rem;
+        font-weight: 400;
+        color: #f472b6;
+        line-height: 1.15;
+        margin-bottom: 0.25rem;
+      }
+      .gallery-cursive-bob {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.85rem;
+        font-weight: 700;
+        color: #f472b6;
+        letter-spacing: 0.05em;
+        margin-top: 0.25rem;
+      }
+      .gallery-title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #57534e;
+        letter-spacing: -0.01em;
+        margin-top: 0.75rem;
+        margin-bottom: 0.25rem;
+      }
+      .gallery-subtitle {
+        font-size: 0.9rem;
+        color: #78716c;
+      }
+      /* 3 Rows, 3 Columns Photo Grid with Equal Dimensions */
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 1.5rem;
+      }
+      .photo-card {
+        background: #ffffff;
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 1px solid #e7e5e4;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .photo-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+      /* Equal Dimensions Image Container (Square 1:1 Aspect Ratio) */
+      .photo-image-wrapper {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        background-color: #f5f5f4;
+      }
+      .photo-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .photo-card:hover .photo-image {
+        transform: scale(1.05);
+      }
+      .photo-caption {
+        padding: 0.875rem 1rem;
+        background-color: #ffffff;
+        text-align: center;
+        border-top: 1px solid #f5f5f4;
+      }
+      .photo-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #292524;
+        line-height: 1.3;
+      }
+      @media (max-width: 768px) {
+        .photo-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+        .gallery-title {
+          font-size: 1.75rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .photo-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
-  <body class="bg-stone-50 text-stone-900 antialiased min-h-screen selection:bg-rose-500 selection:text-white">
-    <div id="root"></div>
+  <body>
+    <div id="root">
+      <main class="gallery-container">
+        <header class="gallery-header">
+          <h1 class="gallery-cursive-name" id="user-cursive-name">Lysette Hernandez</h1>
+          <div class="gallery-cursive-bob" id="user-cursive-dob">DOB 11-17-2011</div>
+          <p class="gallery-subtitle">Curated 9 Photo Collection</p>
+        </header>
+
+        <!-- 9 Photo Grid: 3 Rows, 3 Columns, Equal Dimensions -->
+        <section class="photo-grid" aria-label="3x3 Photography Showcase">
+          <!-- Row 1, Column 1 (Photo 1) -->
+          <article class="photo-card" id="photo-card-1">
+            <div class="photo-image-wrapper">
+              <img
+                class="photo-image"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaVumcaszpHP765DWjYSI-3epOvncD6UMyI4-M9pruMT2aeddU7kUsUQc&s=10"
+                alt="Featured photo"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+            <div class="photo-caption">
+              <h2 class="photo-title">Featured Photo</h2>
+            </div>
+          </article>
+
+          <!-- Row 1, Column 2 (Photo 2) -->
+          <article class="photo-card" id="photo-card-2">
+            <div class="photo-image-wrapper">
+              <img
+                class="photo-image"
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                alt="Turquoise ocean waves gently breaking along a tropical beach shoreline"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-caption">
+              <h2 class="photo-title">Tropical Ocean Shoreline</h2>
+            </div>
+          </article>
+
+          <!-- Row 1, Column 3 (Photo 3) -->
+          <article class="photo-card" id="photo-card-3">
+            <div class="photo-image-wrapper">
+              <img
+                class="photo-image"
+                src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80"
+                alt="Rippled desert sand dunes sculptured by gentle wind under sunset"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-caption">
+              <h2 class="photo-title">Desert Sand Ripples</h2>
+            </div>
+          </article>
+
+          <!-- Row 2, Column 1 (Photo 4) -->
+          <article class="photo-card" id="photo-card-4">
+            <div class="photo-image-wrapper">
+              <img
+                class="photo-image"
+                src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80"
+                alt="Tall evergreen pine forest shrouded in morning mist and sunlight"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-caption">
+              <h2 class="photo-title">Misty Pine Forest</h2>
+            </div>
+          </article>
+
+          <!-- Row 2, Column 2 (Photo 5) -->
+          <article class="photo-card" id="photo-card-5">
+            <div class="photo-image-wrapper">
+              <img
+                class="photo-image"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                alt="Modern geometric glass skyscraper reflecting the sky"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-caption">
+              <h2 class="photo-title">Urban Architectural Lines</h2>
+            </div>
+          </article>
+
+          <!-- Row 2, Column 3 (Photo 6) -->
+          <article class="photo-card" id="photo-card-6">
+            <div class="photo-image-wrapper">
+              <img
+                class="photo-image"
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
+                alt="Artisan crafted latte coffee in ceramic cup with heart leaf latte art"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-caption">
+              <h2 class="photo-title">Artisan Morning Coffee</h2>
+            </div>
+          </article>
+
+          <!-- Row 3, Column 1 (Photo 7) -->
+          <article class="photo-card" id="photo-card-7">
+            <div class="photo-image-wrapper">
+              <img
+                class="photo-image"
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                alt="Serene mountain lake reflection surrounded by evergreen slopes"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-caption">
+              <h2 class="photo-title">Alpine Valley Mist</h2>
+            </div>
+          </article>
+
+          <!-- Row 3, Column 2 (Photo 8) -->
+          <article class="photo-card" id="photo-card-8">
+            <div class="photo-image-wrapper">
+              <img
+                class="photo-image"
+                src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80"
+                alt="Lush wildflower meadow blooming with summer flowers in warm evening light"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-caption">
+              <h2 class="photo-title">Wildflower Meadows</h2>
+            </div>
+          </article>
+
+          <!-- Row 3, Column 3 (Photo 9) -->
+          <article class="photo-card" id="photo-card-9">
+            <div class="photo-image-wrapper">
+              <img
+                class="photo-image"
+                src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+                alt="Vibrant starry night sky with Milky Way over dark mountain horizon"
+                loading="lazy"
+              />
+            </div>
+            <div class="photo-caption">
+              <h2 class="photo-title">Starry Night Horizon</h2>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

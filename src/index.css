@@ -6,6 +6,10 @@
   }
 }
 
-.font-display {
-  font-family: 'Playfair Display', Georgia, serif;
+.font-cursive {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-script {
+  font-family: 'Dancing Script', cursive;
 }
