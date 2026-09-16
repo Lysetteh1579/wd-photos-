@@ -13,66 +13,66 @@ interface PhotoItem {
 const PHOTOS: PhotoItem[] = [
   {
     id: 1,
-    title: 'Featured Photo',
-    category: 'Featured',
+    title: 'Sunset Silhouette',
+    category: 'Sunset',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaVumcaszpHP765DWjYSI-3epOvncD6UMyI4-M9pruMT2aeddU7kUsUQc&s=10',
-    alt: 'Featured photo'
+    alt: 'First sunset silhouette photo'
   },
   {
     id: 2,
-    title: 'Tropical Ocean Shoreline',
-    category: 'Nature',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
-    alt: 'Turquoise ocean waves gently breaking along a tropical beach shoreline'
+    title: 'Warm Beach Sunset',
+    category: 'Sunset',
+    image: 'https://media.desenio.com/site_images/685c8a19cfde1217aabdc594_5581381_17559-5.jpg?auto=compress%2Cformat&fit=max&w=3840',
+    alt: 'Second sunset photo - warm beach sunset reflecting in ocean waves'
   },
   {
     id: 3,
-    title: 'Desert Sand Ripples',
-    category: 'Minimal',
-    image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80',
-    alt: 'Rippled desert sand dunes sculptured by gentle wind under sunset'
+    title: 'Rose Twilight Sunset',
+    category: 'Sunset',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpnKd83CMhbS97IO9Q-TKilUrBgTBFpSio_I05d5ck4yYt1k7SpyZKW8Vx&s=10',
+    alt: 'Third sunset photo - rose twilight sunset sky above pink roses'
   },
   {
     id: 4,
-    title: 'Misty Pine Forest',
-    category: 'Wilderness',
-    image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80',
-    alt: 'Tall evergreen pine forest shrouded in morning mist and sunlight'
+    title: 'Orange Roses',
+    category: 'Botanical',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsHf6W0Dywh571KN5I5mBkXcM0gBghST855_4k93MKAhJs0S4fgetDI7k&s=10',
+    alt: 'Orange roses bouquet in soft warm light'
   },
   {
     id: 5,
-    title: 'Urban Architectural Lines',
-    category: 'Architecture',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
-    alt: 'Modern geometric glass skyscraper reflecting the sky'
+    title: 'White Roses',
+    category: 'Botanical',
+    image: 'https://i.etsystatic.com/8642388/r/il/aecb95/1297556594/il_570xN.1297556594_in9b.jpg',
+    alt: 'White roses bouquet in soft light'
   },
   {
     id: 6,
-    title: 'Artisan Morning Coffee',
-    category: 'Lifestyle',
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80',
-    alt: 'Artisan crafted latte coffee in ceramic cup with heart leaf latte art'
+    title: 'Pink Roses',
+    category: 'Botanical',
+    image: 'https://i.etsystatic.com/15022550/r/il/7367d4/1284416589/il_1080xN.1284416589_h3el.jpg',
+    alt: 'Delicate pink roses bouquet'
   },
   {
     id: 7,
-    title: 'Alpine Valley Mist',
-    category: 'Mountains',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
-    alt: 'Serene mountain lake reflection surrounded by evergreen slopes'
+    title: 'Golden Rose Bloom',
+    category: 'Botanical',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNsvJhtdvG2qz4lVpWtIiDh-CIiyb2ImizGvOS4tAapbPI2w983zy3kHKZ&s=10',
+    alt: 'Golden orange roses bouquet'
   },
   {
     id: 8,
-    title: 'Wildflower Meadows',
+    title: 'White Blossom Bouquet',
     category: 'Botanical',
-    image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80',
-    alt: 'Lush wildflower meadow blooming with summer flowers in warm evening light'
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzMrZAbcYOf2hD6TwI-nefd-hwW7vYmoIkiyjCTzGR79Zid4pndwKB-lHn&s=10',
+    alt: 'Cream and white floral bouquet with fresh greenery'
   },
   {
     id: 9,
-    title: 'Starry Night Horizon',
-    category: 'Astronomy',
-    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80',
-    alt: 'Vibrant starry night sky with Milky Way over dark mountain horizon'
+    title: 'Blush Rose Bloom',
+    category: 'Botanical',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSChqp2W4tSPSVIQpLaMHu_qb5EEaOAVLtIk0RxVzJxrvI9It7ZSEEeoSg&s=10',
+    alt: 'Blush pink roses bouquet in soft light'
   }
 ];
 
@@ -85,13 +85,13 @@ export function App() {
       className="min-h-screen w-full bg-stone-50 text-stone-900 px-4 sm:px-6 lg:px-8 py-10"
     >
       <div className="max-w-5xl mx-auto">
-        {/* Header with Lysette Hernandez and DOB 11-17-2011 in light pink cursive */}
+        {/* Header with Lysette Hernandez and DOB 11-17-2011 in baby pink cursive */}
         <header className="text-center mb-8 sm:mb-10">
           <motion.h1
             id="user-name-cursive"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl sm:text-6xl md:text-7xl font-normal text-pink-400 font-cursive leading-tight"
+            className="text-5xl sm:text-6xl md:text-7xl font-normal text-[#f8a3bc] font-cursive leading-tight"
           >
             Lysette Hernandez
           </motion.h1>
@@ -103,7 +103,7 @@ export function App() {
             transition={{ delay: 0.1 }}
             className="mt-1 inline-block"
           >
-            <span className="font-script text-2xl sm:text-3xl font-bold text-pink-400 tracking-wider">
+            <span className="font-script text-2xl sm:text-3xl font-bold text-[#f8a3bc] tracking-wider">
               DOB 11-17-2011
             </span>
           </motion.div>
