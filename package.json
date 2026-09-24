@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0 --port 3000",
+    "dev": "vite --host 0.0.0.0 --port 5000 --strictPort",
     "build": "tsc && vite build",
     "lint": "tsc --noEmit",
-    "preview": "vite preview --host 0.0.0.0 --port 3000"
+    "preview": "vite preview --host 0.0.0.0 --port 5000 --strictPort"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
@@ -16,7 +16,7 @@
     "motion": "^12.4.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind-merge": "^3.0.1"
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",

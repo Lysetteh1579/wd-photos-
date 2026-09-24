@@ -1,6 +1,6 @@
 {
-  "name": "All About Me",
-  "description": "An interactive 'All About Me' personal portfolio and web development showcase for Lysette Hernandez.",
+  "name": "Lysette's All About Me",
+  "description": "Lysette Hernandez's personal portfolio with goals, favorites, photos, and media.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }
