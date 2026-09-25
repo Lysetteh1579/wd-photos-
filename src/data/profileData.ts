@@ -88,12 +88,12 @@ export const FAVORITES_DATA: FavoriteItem[] = [
     tag: 'Lifestyle'
   },
   {
-    id: 'fav-fugglers',
-    category: 'hobbies',
-    title: 'Collecting Fugglers',
-    subtitle: 'Quirky, mischievous & funny plush monsters',
-    description: 'Hunting down rare Fugglers (Funny Ugly Monsters) with their signature realistic teeth, goofy mismatched expressions, and chaotic plush charm.',
-    tag: 'Collection'
+    id: 'fav-outings',
+    category: 'places',
+    title: 'Going Out to Places',
+    subtitle: 'Exploring favorite spots & discovering new places',
+    description: 'Enjoying outings to new places, checking out local attractions, and making memories along the way.',
+    tag: 'Places'
   },
   {
     id: 'fav-friends',
