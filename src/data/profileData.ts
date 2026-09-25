@@ -3,6 +3,10 @@ import trapsoulCover from '../assets/images/trapsoul_album_cover_1790185130216.j
 import drakeCover from '../assets/images/drake_album_cover_1790185534171.jpg';
 import jeremihCover from '../assets/images/jeremih_album_cover_1790185546122.jpg';
 import pndCover from '../assets/images/partynextdoor_cover_1790185900156.jpg';
+import concertPhoto from '../assets/images/photo-concert-night.jpg';
+import shoppingPhoto from '../assets/images/photo-shopping-stop.jpg';
+import sunsetPhoto from '../assets/images/photo-sunset.jpg';
+import dayOutPhoto from '../assets/images/photo-day-out.jpg';
 
 export const BRYSON_TILLER_ALBUM_COVER = trapsoulCover;
 export const DRAKE_ALBUM_COVER = drakeCover;
@@ -190,6 +194,34 @@ export const DEFAULT_PHOTOS: PhotoItem[] = [
     date: 'August 2026',
     location: 'Campus Commons',
     likes: 21
+  },
+  {
+    id: 'photo-concert-night',
+    url: concertPhoto,
+    caption: 'Concert night',
+    category: 'moments',
+    likes: 0
+  },
+  {
+    id: 'photo-shopping-stop',
+    url: shoppingPhoto,
+    caption: 'A shopping stop',
+    category: 'moments',
+    likes: 0
+  },
+  {
+    id: 'photo-sunset',
+    url: sunsetPhoto,
+    caption: 'Sunset by the water',
+    category: 'moments',
+    likes: 0
+  },
+  {
+    id: 'photo-day-out',
+    url: dayOutPhoto,
+    caption: 'A day out',
+    category: 'moments',
+    likes: 0
   }
 ];
 

@@ -26,7 +26,12 @@ export const PhotosSection: React.FC = () => {
     try {
       const saved = localStorage.getItem(STORAGE_PHOTOS_KEY);
       if (saved) {
-        return JSON.parse(saved);
+        const savedPhotos = JSON.parse(saved) as PhotoItem[];
+        if (Array.isArray(savedPhotos)) {
+          const savedIds = new Set(savedPhotos.map((photo) => photo.id));
+          const missingDefaults = DEFAULT_PHOTOS.filter((photo) => !savedIds.has(photo.id));
+          return [...missingDefaults, ...savedPhotos];
+        }
       }
     } catch {
       // fallback
