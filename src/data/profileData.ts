@@ -160,42 +160,6 @@ export const TRIVIA_QUESTIONS: TriviaQuestion[] = [
 
 export const DEFAULT_PHOTOS: PhotoItem[] = [
   {
-    id: 'photo-1',
-    url: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Late night coding sessions & frontend layout experiments',
-    category: 'coding',
-    date: 'Fall 2026',
-    location: 'Study Desk',
-    likes: 18
-  },
-  {
-    id: 'photo-2',
-    url: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80',
-    caption: 'My vintage camera setup for capturing golden hour moments',
-    category: 'creative',
-    date: 'October 2026',
-    location: 'Outdoor Walk',
-    likes: 24
-  },
-  {
-    id: 'photo-3',
-    url: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Weekend music inspiration & favorite acoustic playlists',
-    category: 'moments',
-    date: 'September 2026',
-    location: 'Vinyl Cafe',
-    likes: 15
-  },
-  {
-    id: 'photo-4',
-    url: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80',
-    caption: 'Collaborating on class web development lab assignments',
-    category: 'campus',
-    date: 'August 2026',
-    location: 'Campus Commons',
-    likes: 21
-  },
-  {
     id: 'photo-concert-night',
     url: concertPhoto,
     caption: 'Concert night',

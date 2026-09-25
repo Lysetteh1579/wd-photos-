@@ -20,6 +20,7 @@ import {
 
 const STORAGE_PHOTOS_KEY = 'lysette_portfolio_photos_v2';
 const STORAGE_LIKES_KEY = 'lysette_portfolio_photo_likes_v2';
+const REMOVED_DEFAULT_PHOTO_IDS = new Set(['photo-1', 'photo-2', 'photo-3', 'photo-4']);
 
 export const PhotosSection: React.FC = () => {
   const [photos, setPhotos] = useState<PhotoItem[]>(() => {
@@ -28,9 +29,10 @@ export const PhotosSection: React.FC = () => {
       if (saved) {
         const savedPhotos = JSON.parse(saved) as PhotoItem[];
         if (Array.isArray(savedPhotos)) {
-          const savedIds = new Set(savedPhotos.map((photo) => photo.id));
+          const retainedPhotos = savedPhotos.filter((photo) => !REMOVED_DEFAULT_PHOTO_IDS.has(photo.id));
+          const savedIds = new Set(retainedPhotos.map((photo) => photo.id));
           const missingDefaults = DEFAULT_PHOTOS.filter((photo) => !savedIds.has(photo.id));
-          return [...missingDefaults, ...savedPhotos];
+          return [...missingDefaults, ...retainedPhotos];
         }
       }
     } catch {
